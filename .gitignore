@@ -1,4 +1,16 @@
+#R files to avoid when commiting
+
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
+
+#Avoiding adding html
+*.html
+
+#Ignoring all zip files
+*.zip
+
+#Path to shape and raster files
+data/shapefiles
+data/raster
