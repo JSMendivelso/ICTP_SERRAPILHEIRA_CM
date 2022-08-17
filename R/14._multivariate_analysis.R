@@ -16,7 +16,7 @@ table(dune.env$Management)
 #Cluster analysis of the dune vegetation
 #We calculate 2 dissimilarities indices between sites (Bray-Curtis and Chord distances)
 bray_distance <- vegdist(dune)
-#decostand provides standarization methods for community ecologists
+#decostand provides standardization methods for community ecologists
 chord_distance <- dist(decostand(dune, "norm")) #chord: euclidean normalized to 1
 
 #using cluster, default method is complete, we want to use average
@@ -42,14 +42,11 @@ par(mfrow = c(1,1))
 is(chord_distance)
 norm <- decostand(dune, "norm")
 pca <- rda(norm) #redundancy analysis
-#RDA permite estudiar la relación entre 2 tablas de variables Y y X. Es un método
-#disimétrico. Los componentes son extraídos de manera que X está tan correlacionado
-#con Y como sea posible.
 
 plot(pca)
 summary(pca)
-#plot(pca, choices = c(2,3)) #Warnings?? check later
-#recoding beacause it's not working.
+#plot(pca, choices = c(2,3))
+
 #PCA for an enviromental matrix
 names(dune.env)
 apply(dune.env, 2, class)

@@ -1,5 +1,12 @@
-#July 26 - Andrea Sanchez Tapia
+# --------------------------------------------------#
+# Scientific computing
+# ICTP/Serrapilheira 2022
+# Spatial data
+# First Version 2022-07-26
+# --------------------------------------------------#
 
+
+# Loading needed packages
 library(sf)
 library(tmap)
 library(dplyr)
