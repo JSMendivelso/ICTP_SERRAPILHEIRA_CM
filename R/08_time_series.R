@@ -1,3 +1,11 @@
+# --------------------------------------------------#
+# Scientific computing
+# ICTP/Serrapilheira 2022
+# Time-series implementation
+# First Version 2022-07-21
+# --------------------------------------------------#
+
+# Loading needed packages
 library(dplyr)
 library(ggplot2)
 library(lubridate)
@@ -14,7 +22,7 @@ class(covid$date)
 # Now we can make numeric operations
 range(covid$date)
 
-covid$new_confirmed[covid$new_confirmed < 0] <- 0 #bc we have negative cases (just after checking and being sure you can do this)
+covid$new_confirmed[covid$new_confirmed < 0] <- 0 #Because we have negative cases (just after checking and being sure you can do this)
 
 #Rolling mean with zoo
 covid$roll_mean<-zoo::rollmean(covid$new_confirmed, 14, fill=NA) #NA needed for removing empty spaces and keep the size
